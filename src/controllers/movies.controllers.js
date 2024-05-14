@@ -58,7 +58,7 @@ const setMovieDirectors =catchError(async(req, res)  => {
     const { id } =req.params;
     const movie = await Movies.findByPk(id);
     if (!movie) return res.status(404).json({ message: "Director no found"})
-        await movie.setGenres(req.body);
+        await movie.setDirectors(req.body);
     const directors = await movie.getDirectors();
     return res.json(directors);      
 });  

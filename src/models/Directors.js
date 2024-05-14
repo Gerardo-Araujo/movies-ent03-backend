@@ -1,6 +1,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../utils/connection');
 
+
 const Directors = sequelize.define('directors', {
     firstName: {
         type: DataTypes.STRING,
