@@ -1,8 +1,9 @@
 const catchError = require('../utils/catchError');
 const Directors = require('../models/Directors');
+const Movies = require('../models/Movies');
 
 const getAll = catchError(async(req, res) => {
-    const results = await Directors.findAll();
+    const results = await Directors.findAll({ include: [Movies]});
     return res.json(results);
 });
 
