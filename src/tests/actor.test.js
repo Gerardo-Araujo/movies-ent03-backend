@@ -9,6 +9,7 @@ test('GET /actors debe traer todos los actores', async () => {
     expect(res.body).toBeInstanceOf(Array); // tbi
 });
 
+
 test('POST /actors debe crear un actor', async () => {
     const body = {
         firstName: "Leonardo",
